@@ -52,15 +52,15 @@ const Provider = ({ children }) => {
       setLoading(false);
       if (currentUser) {
 
-        //https://food-blogs-auth.web.app
-        axios.post("https://food-blogs-auth.web.app/jwt", userEmail, { withCredentials: true })
+        //https://food-blog-server.vercel.app
+        axios.post("https://food-blog-server.vercel.app/jwt", userEmail, { withCredentials: true })
           .then(res => {
             console.log(res.data);
           })
       }
       else {
 
-        axios.post(`https://food-blogs-auth.web.app/signOut`, userEmail, { withCredentials: true })
+        axios.post(`https://food-blog-server.vercel.app/signOut`, userEmail, { withCredentials: true })
           .then(res => console.log(res.data))
       }
 

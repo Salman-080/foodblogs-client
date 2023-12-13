@@ -13,7 +13,7 @@ const FeaturedBlogs = () => {
     const { data: TopTenPost, isPending, isError, error } = useQuery({
         queryKey: ['TopTenPost'],
         queryFn: async () => {
-            const res = await axios.get('https://food-blogs-auth.web.app/featuredBlogsPosts');
+            const res = await axios.get('https://food-blog-server.vercel.app/featuredBlogsPosts');
 
             // return res.data;
 

@@ -18,7 +18,7 @@ const AllBlogs = () => {
     const { data: Blogs, isPending, isError, error } = useQuery({
         queryKey: ['Blogs'],
         queryFn: async () => {
-            const res = await axios.get('https://food-blogs-auth.web.app/allBlogs');
+            const res = await axios.get('https://food-blog-server.vercel.app/allBlogs');
 
             // return res.data;
             
@@ -85,7 +85,7 @@ const AllBlogs = () => {
         }
         // blog.userEmail = userEmail;
 
-        // fetch('https://food-blogs-auth.web.app/wishLists',{
+        // fetch('https://food-blog-server.vercel.app/wishLists',{
         //     method: 'POST',
         //     headers: {
         //         'content-type': 'application/json'
@@ -95,7 +95,7 @@ const AllBlogs = () => {
         // .then(res=>res.json())
         // .then(data=>console.log(data))
 
-        axios.post('https://food-blogs-auth.web.app/wishLists', wishListBlog)
+        axios.post('https://food-blog-server.vercel.app/wishLists', wishListBlog)
             .then(res => {
                 console.log(res.data)
 

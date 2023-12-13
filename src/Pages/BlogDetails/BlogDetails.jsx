@@ -18,7 +18,7 @@ const BlogDetails = () => {
     console.log(userEmail)
 
     // useEffect(()=>{
-    //     axios.get(`https://food-blogs-auth.web.app/details/${id}?email=${user?.email}`)
+    //     axios.get(`https://food-blog-server.vercel.app/details/${id}?email=${user?.email}`)
     //     .then(res=>{
     //         setBlogDetails(res.data);
     //     })
@@ -29,7 +29,7 @@ const BlogDetails = () => {
         queryFn: async () => {
             
    
-            const res = await axios.get(`https://food-blogs-auth.web.app/details/${id}`);
+            const res = await axios.get(`https://food-blog-server.vercel.app/details/${id}`);
 
             // return res.data;
 
@@ -38,7 +38,7 @@ const BlogDetails = () => {
     });
 
     useEffect(()=>{
-        axios.get(`https://food-blogs-auth.web.app/commentsInfo/${BlogDetails?._id}`)
+        axios.get(`https://food-blog-server.vercel.app/commentsInfo/${BlogDetails?._id}`)
         .then(res=>{
             console.log(res.data);
             setCommentsDetails(res.data);
@@ -51,7 +51,7 @@ const BlogDetails = () => {
     // const { data: Comments } = useQuery({
     //     queryKey: ['Comments'],
     //     queryFn: async () => {
-    //         const res = await axios.get(`https://food-blogs-auth.web.app/commentsInfo/${BlogDetails._id}`);
+    //         const res = await axios.get(`https://food-blog-server.vercel.app/commentsInfo/${BlogDetails._id}`);
 
     //         // return res.data;
     //         setCommentsDetails(Comments);
@@ -83,7 +83,7 @@ const BlogDetails = () => {
         }
         console.log(commentsInfo)
         // console.log(comment, blog_id);
-        axios.post("https://food-blogs-auth.web.app/commentsInfo", commentsInfo)
+        axios.post("https://food-blog-server.vercel.app/commentsInfo", commentsInfo)
             .then(res => {
                 console.log(res.data)
 

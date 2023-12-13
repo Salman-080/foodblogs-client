@@ -11,7 +11,7 @@ const Featured = () => {
     const { data: featuredBlogs, isPending, isError, error } = useQuery({
         queryKey: ['featuredBlogs'],
         queryFn: async () => {
-            const res = await axios.get('https://food-blogs-auth.web.app/Blogs')
+            const res = await axios.get('https://food-blog-server.vercel.app/Blogs')
 
             return res.data;
         }
@@ -40,7 +40,7 @@ const Featured = () => {
             userEmail: userEmail
         }
 
-        axios.post('https://food-blogs-auth.web.app/wishLists', wishListBlog)
+        axios.post('https://food-blog-server.vercel.app/wishLists', wishListBlog)
             .then(res => {
                 console.log(res.data)
 

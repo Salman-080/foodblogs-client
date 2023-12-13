@@ -4,7 +4,7 @@ TastyTrailsJourney
 
 # Website Live Link
 
-https://food-blogs-auth.web.app/
+https://food-blog-server.vercel.app/
 
 # About my project features and functionality
 

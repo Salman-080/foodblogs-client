@@ -21,7 +21,7 @@ const WishList = () => {
         queryFn: async () => {
             console.log(userEmail)
             
-                const res = await axios.get(`https://food-blogs-auth.web.app/wishLists?email=${userEmail}`,{withCredentials: true});
+                const res = await axios.get(`https://food-blog-server.vercel.app/wishLists?email=${userEmail}`,{withCredentials: true});
                 console.log(wishListBlogs)
             // return res.data;
 
@@ -49,7 +49,7 @@ const WishList = () => {
     }
 
     const handleDelete = (id) => {
-        axios.post(`https://food-blogs-auth.web.app/delete/${id}`)
+        axios.post(`https://food-blog-server.vercel.app/delete/${id}`)
             .then(res => {
 
                 console.log(res.data)
